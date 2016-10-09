@@ -168,27 +168,27 @@ var menuOptions = {
     // data for menu tree
     data: [
         {
-            title: "��������",
+            title: "Животные",
             cssClassList: ['hasChildren'],
             items: [
                 {
-                    title: "�������������",
+                    title: "Млекопитающие",
                     cssClassList: ['hasChildren'],
                     items: [
                         {
-                            title: "������",
+                            title: "Коровы",
                             link: "#"
                         }, {
-                            title: "����",
+                            title: "Ослы",
                             link: "#"
                         }, {
-                            title: "������",
+                            title: "Собаки",
                             link: "#"
                         }, {
-                            title: "������",
+                            title: "Коты",
                             link: "#"
                         }, {
-                            title: "�����",
+                            title: "Тигры",
                             link: "#"
                         }
                     ]
@@ -196,43 +196,43 @@ var menuOptions = {
             ]
         },
         {
-            title: "������",
+            title: "Другие",
             cssClassList: ['hasChildren'],
             items: [
                 {
-                    title: "����",
+                    title: "Змеи",
                     link: "#"
                 }, {
-                    title: "�����",
+                    title: "Птицы",
                     link: "#"
                 }, {
-                    title: "�������",
+                    title: "Ящерицы",
                     link: "#"
                 }
             ]
         },
         {
-            title: "����",
+            title: "Рыбы",
             cssClassList: ['hasChildren'],
             items: [
                 {
-                    title: "�����������",
+                    title: "Аквариумные",
                     cssClassList: ['hasChildren'],
                     items: [
                         {
-                            title: "��������",
+                            title: "Скалярии",
                             link: "#"
                         }, {
-                            title: "�����",
+                            title: "Гупии",
                             link: "#"
                         }
                     ]
                 }, {
-                    title: "������",
+                    title: "Форель",
                     cssClassList: ['hasChildren'],
                     items: [
                         {
-                            title: "������� ������",
+                            title: "Морская форель",
                             link: "#"
                         }
                     ]

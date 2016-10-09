@@ -246,27 +246,27 @@ let menuOptions:menuOptions = {
     // data for menu tree
     data: [
         {
-            title: "Животные",
+            title: "Р–РёРІРѕС‚РЅС‹Рµ",
             cssClassList: ['hasChildren'],
             items: [
                 {
-                    title: "Млекопитающие",
+                    title: "РњР»РµРєРѕРїРёС‚Р°СЋС‰РёРµ",
                     cssClassList: ['hasChildren'],
                     items: [
                         {
-                            title: "Коровы",
+                            title: "РљРѕСЂРѕРІС‹",
                             link: "#"
                         },{
-                            title: "Ослы",
+                            title: "РћСЃР»С‹",
                             link: "#"
                         },{
-                            title: "Собаки",
+                            title: "РЎРѕР±Р°РєРё",
                             link: "#"
                         },{
-                            title: "Собаки",
+                            title: "РљРѕС‚С‹",
                             link: "#"
                         },{
-                            title: "Тигры",
+                            title: "РўРёРіСЂС‹",
                             link: "#"
                         }
 
@@ -276,44 +276,44 @@ let menuOptions:menuOptions = {
         },
 
         {
-            title: "Другие",
+            title: "Р”СЂСѓРіРёРµ",
             cssClassList: ['hasChildren'],
             items: [
                 {
-                    title: "Змеи",
+                    title: "Р—РјРµРё",
                     link: "#"
                 },{
-                    title: "Птицы",
+                    title: "РџС‚РёС†С‹",
                     link: "#"
                 },{
-                    title: "Ящерицы",
+                    title: "РЇС‰РµСЂРёС†С‹",
                     link: "#"
                 }
             ]
         },
 
         {
-            title: "Рыбы",
+            title: "Р С‹Р±С‹",
             cssClassList: ['hasChildren'],
             items: [
                 {
-                    title: "Аквариумные",
+                    title: "РђРєРІР°СЂРёСѓРјРЅС‹Рµ",
                     cssClassList: ['hasChildren'],
                     items: [
                         {
-                            title: "Скалярии",
+                            title: "РЎРєР°Р»СЏСЂРёРё",
                             link: "#"
                         },{
-                            title: "Гупии",
+                            title: "Р“СѓРїРёРё",
                             link: "#"
                         }
                     ]
                 },{
-                    title: "Форель",
+                    title: "Р¤РѕСЂРµР»СЊ",
                     cssClassList: ['hasChildren'],
                     items: [
                         {
-                            title: "Морская форель",
+                            title: "РњРѕСЂСЃРєР°СЏ С„РѕСЂРµР»СЊ",
                             link: "#"
                         }
                     ]
@@ -325,4 +325,5 @@ let menuOptions:menuOptions = {
 
 let menu = new Menu(menuOptions);
 menu.getElement();
+
 

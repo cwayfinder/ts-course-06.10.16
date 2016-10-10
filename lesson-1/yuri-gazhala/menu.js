@@ -243,4 +243,3 @@ var menuOptions = {
 };
 var menu = new Menu(menuOptions);
 menu.getElement();
-//# sourceMappingURL=menu.js.map

@@ -1,0 +1,233 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.2;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ol {
+    padding-left: 1.4em;
+    list-style: decimal;
+}
+ul {
+    padding-left: 1.4em;
+    list-style: square;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+/* end reset browser styles */
+
+
+/*include padding and margin within the container*/
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body p {
+    width: 75%;
+    max-width: 400px; /* long text imitation*/
+    margin-left: 40px;
+}
+
+
+/* =pageMask component ---------------*/
+
+/* this wrapper makes blackout of main content, when menu is enabled */
+.pageMask {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    background-color: black;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+    -moz-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+    -o-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+    transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s; /* property, duration, delay */
+}
+
+.pageMask.open {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+/* end pageMask component -----------*/
+
+
+/* =menu component -----------------*/
+
+body.menuEnabled {
+    /*When menu enabled, hide the overflows on the body to prevent
+    document scrolling.*/
+    overflow: hidden;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    transition: left 0.3s;
+}
+
+@media all and (min-width: 320px) {
+    .menu {
+        font-size: 18px;
+        left: -265px;
+        width: 300px;
+    }
+
+    .menu > ul { /* contains root items of menu */
+        width: 265px; /* save 3px space between menu items and the menu title */
+    }
+
+    .menu__title img {
+        width: 32px;
+    }
+
+    .menu__title.open {
+        left: 268px;
+    }
+}
+
+.menu.open {
+    left: 0;
+}
+
+.menu__title {
+    position: fixed;
+    left: 3px;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    transition: left 0.3s;
+}
+
+.menu ul {
+    display: none; /* default */
+    list-style: none;
+    background-color: lightsteelblue;
+}
+
+.menu > ul {
+    height: 100%; /* add background-color down to the end of the screen */
+    overflow-y: auto; /* vertical scroll appears, when it is necessary */
+    padding-left: 0;
+}
+
+.open > ul {
+    display: block;
+}
+
+.menu > ul a {
+    padding: 0.2em 0 0.2em 0.5em;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.menu > ul div { /* title of subcategory */
+    padding: 0.2em 0 0.2em 0.5em;
+    color: white;
+    cursor: pointer;
+}
+
+/* root items of menu */
+.menu > ul > li > div,
+.menu > ul > li > a {
+    border-top: solid 1px rgb(181, 219, 233);
+    border-bottom: solid 1px rgb(49, 132, 161);
+    background-color: cornflowerblue;
+}
+
+/* nested lists */
+.hasChildren ul a,
+.hasChildren ul div {
+    color: darkblue;
+}
+
+/* for all nested lists, starting from second level of menu tree */
+.menu > ul > li > ul li.hasChildren div {
+    border-top: solid 1px darkblue;
+    border-bottom: solid 1px darkblue;
+}
+
+/* add background image for all submenu titles */
+.hasChildren::before {
+    margin-top: 0.3em;
+    content: "";
+    float: right;
+    background: url(./images/submenu-arrows-sprite.png) no-repeat -1px -1px;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.hasChildren.open::before {
+    background-position: -3px -16px;
+}
+
+/* rewrite background image for root menu titles */
+.menu > ul > li.hasChildren::before {
+    margin-top: 0.3em;
+    content: "";
+    float: right;
+    background: url(./images/menu-arrows-sprite.png) no-repeat -1px -1px;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+
+.menu > ul > li.hasChildren.open::before {
+    background-position: -3px -16px;
+}
+
+/* hover style for all items */
+.menu.desktop > ul > li div:hover,
+.menu.desktop > ul > li a:hover {
+    background-color: aliceblue;
+    opacity: 0.5;
+}
+
+/* hover style for root menu items */
+.menu.desktop > ul > li > div:hover,
+.menu.desktop > ul > li > a:hover {
+    background-color: cornflowerblue;
+}
+
+/* end menu component -------------*/

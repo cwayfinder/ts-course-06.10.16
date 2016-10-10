@@ -82,4 +82,4 @@ class MainMenu {
 };
 
 const container:HTMLMenuElement = document.getElementsByTagName('menu')[0];
-let menu = new MainMenu(container, menuData);
+let menu1 = new MainMenu(container, menuData);

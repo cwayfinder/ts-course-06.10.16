@@ -1,4 +1,10 @@
 .idea
 node_modules
 npm-debug.log
-*.js
+
+
+**/*.js
+**/*.map
+.vscode
+.project
+.DS_Store

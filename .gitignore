@@ -1,0 +1,10 @@
+.idea
+node_modules
+npm-debug.log
+
+
+**/*.js
+**/*.map
+.vscode
+.project
+.DS_Store

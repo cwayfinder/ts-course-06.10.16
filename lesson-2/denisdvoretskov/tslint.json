@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "indent": [true, "spaces"],
+    "linebreak-style": [true, "LF"],
+    "max-line-length": [true, 80],
+    "eofline": true,
+    "no-trailing-whitespace": true,
+    "no-consecutive-blank-lines": true,
+    "whitespace": [
+      true, "check-branch", "check-decl", "check-operator", "check-module",
+      "check-type", "check-typecast"
+    ],
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    "variable-name": [
+      true, "ban-keywords", "check-format", "allow-leading-underscore"
+    ],
+    "class-name": true,
+    "interface-name": [true, "always-prefix"],
+    "triple-equals": true,
+    "no-use-before-declare": true,
+    "no-unused-expression": true,
+    "no-empty": true,
+    "member-access": [true, "check-accessor"],
+    "no-unreachable": true,
+    "quotemark": [true, "single", "jsx-single", "avoid-escape"],
+    "curly": true,
+    "semicolon": [true, "always"],
+    "no-var-keyword": true
+  }
+}

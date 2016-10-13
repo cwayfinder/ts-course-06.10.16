@@ -99,7 +99,7 @@ logger("getUnique", [
     s1tar3t 2   low5  ->  t1rat3s 2   wol5
 */
 function reverseStr(inputStr:string):string{
-    let words: string[] = inputStr.split(/\s+[^a-zA-Z]*|[^a-zA-Z]+$/),
+    let words: string[] = inputStr.split(/^[^a-zA-Z]+|\s+[^a-zA-Z]*|[^a-zA-Z]+$/),
         letterRegex = /[a-zA-Z]/,
         outputStr: string = inputStr,
         lastPos: number = 0;

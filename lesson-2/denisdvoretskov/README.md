@@ -12,7 +12,7 @@ tsconfig.json:
     "module": "commonjs",
     "target": "es6",
     "types": ["node"],
-    "lib": ["es6","es2016.array.include"]
+    "lib": ["es6","es5","dom","es2016.array.include"]
   }
 }
 ```

@@ -10,8 +10,9 @@ class Slider {
         this.thumbElem = this.sliderElem.querySelector(".thumb") as HTMLElement;
 
         this.sliderElem.onmousedown = (event: MouseEvent) => {
+            let element = event.target as HTMLElement;
             //Почему TS подсвечивает closest и contains? Что с этим делать?
-            if (event.target.closest(".thumb") && this.sliderElem.contains(event.target)) {
+            if (element.closest(".thumb") && this.sliderElem.contains(element)) {
                 this.processMouseDown(event);
             }
 

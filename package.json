@@ -10,7 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "2.0.3"
+  },
+  "dependencies": {
+    "@types/lodash": "4.14.37",
+    "lodash": "4.16.4",
+    "whatwg-fetch": "1.0.0"
   }
 }
-
-

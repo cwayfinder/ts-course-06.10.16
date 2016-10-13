@@ -1,6 +1,7 @@
-function isInArray(container: string[], ...varArgs: string[]) : boolean
-{
-    return container.every((value, index, array) => { return varArgs.indexOf(value) >= 0; });
+function isInArray(container: string[], ...varArgs: string[]): boolean {
+    return container.every((value, index, array) => {
+        return varArgs.indexOf(value) >= 0;
+    });
 }
 
 console.log('Mismatch (cyan, magenta, yellow) = ' + isInArray(['red', 'green', 'blue'], 'cyan', 'magenta', 'yellow'));

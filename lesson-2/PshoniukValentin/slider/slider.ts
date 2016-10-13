@@ -116,8 +116,9 @@ class Slider implements ISlider{
             sliderPos: number = this.rootEl.getBoundingClientRect().left,
             mousePos: number =  e.pageX,
             vp: number = Math.abs(this.params.max - this.params.min) / sliderWidth,
-            val: number = Math.round(vp * Math.min(Math.max(mousePos - sliderPos, 0), sliderWidth) / this.params.step) + this.params.min;
+            val: number = Math.round(vp * Math.min(Math.max(mousePos - sliderPos, 0), sliderWidth)) + this.params.min;
 
+        val = Math.floor(val/this.params.step) * this.params.step;
         this.setValue(val);
     }
 }

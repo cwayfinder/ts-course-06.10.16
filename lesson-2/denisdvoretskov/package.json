@@ -1,0 +1,16 @@
+{
+  "name": "hw2",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --check-leaks --bail --recursive"
+  },
+  "dependencies": {
+    "mocha": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.45",
+    "mocha": "^3.1.2"
+  }
+}
